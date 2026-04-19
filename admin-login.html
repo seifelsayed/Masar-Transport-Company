@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASAR - Super Admin Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
+  <div class="w-full max-w-sm">
+    <div class="text-center mb-6">
+      <div class="w-20 h-20 rounded-2xl overflow-hidden mx-auto shadow-lg mb-3">
+        <img src="assets/logo.jpeg" alt="MASAR" class="w-full h-full object-cover">
+      </div>
+      <h1 class="text-white text-2xl font-extrabold tracking-tight">MASAR</h1>
+      <p class="text-amber-400/70 text-sm font-medium">لوحة السوبر أدمن</p>
+    </div>
+
+    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-amber-500/20">
+      <form id="sa-login-form" class="space-y-4">
+        <div class="relative">
+          <i class="bi bi-person absolute top-1/2 -translate-y-1/2 right-3 text-white/40 text-sm"></i>
+          <input type="text" id="sa-username" required placeholder="اسم المستخدم" class="w-full bg-white/5 border border-white/10 rounded-xl py-2.5 pr-9 pl-4 text-white text-sm placeholder-white/20 outline-none focus:border-amber-500/60 transition-all duration-200">
+        </div>
+
+        <div class="relative">
+          <i class="bi bi-lock absolute top-1/2 -translate-y-1/2 right-3 text-white/40 text-sm"></i>
+          <input type="password" id="sa-password" required placeholder="كلمة المرور" class="w-full bg-white/5 border border-white/10 rounded-xl py-2.5 pr-9 pl-10 text-white text-sm placeholder-white/20 outline-none focus:border-amber-500/60 transition-all duration-200">
+          <button type="button" id="toggle-sa-pass" class="absolute top-1/2 -translate-y-1/2 left-3 text-white/40 hover:text-white/70 transition-colors text-sm">
+            <i class="bi bi-eye"></i>
+          </button>
+        </div>
+
+        <div id="sa-error-msg" class="text-red-400 text-xs font-medium text-center hidden"></div>
+
+        <button type="submit" id="sa-login-btn" class="w-full text-white py-3 rounded-xl font-bold text-sm shadow-lg transition-all disabled:opacity-70 bg-gradient-to-r from-amber-500 to-amber-600 shadow-amber-500/30">
+          <span class="flex items-center justify-center gap-2">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>دخول</span>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/superadmin-login.js"></script>
+</body>
+</html>
